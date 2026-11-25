@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Expense & Budget Management System</title>
+    <style>
+        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: #f1f5f9; color: #1e293b; line-height: 1.5; }
+        header { background: #1e3a8a; color: #fff; padding: 14px 6%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        header .logo { font-size: 1.25rem; font-weight: bold; }
+        nav a { color: #fff; text-decoration: none; margin-left: 16px; font-weight: 500; font-size: 0.95rem; }
+        nav a.btn-reg { background: #10b981; padding: 7px 14px; border-radius: 5px; font-weight: bold; }
+        nav a.btn-reg:hover { background: #059669; }
+
+        .hero { background: linear-gradient(135deg, #1e3a8a, #2563eb); color: #fff; text-align: center; padding: 50px 20px; }
+        .hero h1 { font-size: 2rem; margin-bottom: 12px; }
+        .hero p { max-width: 680px; margin: 0 auto 22px; font-size: 1.05rem; opacity: 0.95; }
+        .hero .cta { display: inline-block; background: #10b981; color: #fff; text-decoration: none; padding: 11px 22px; border-radius: 6px; font-weight: bold; }
+
+        .container { max-width: 1020px; margin: 35px auto; padding: 0 20px; }
+        h2.sec-title { color: #1e3a8a; margin-bottom: 16px; font-size: 1.45rem; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-bottom: 35px; }
+        .card { background: #fff; padding: 18px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .card h3 { color: #1e3a8a; margin-bottom: 6px; font-size: 1.05rem; }
+        .card p { color: #475569; font-size: 0.92rem; }
+
+        .sample-card { background: #fff; padding: 22px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 35px; }
+        .stat { background: #f8fafc; border-left: 4px solid #2563eb; padding: 14px; border-radius: 5px; }
+        .stat.alert-stat { background: #fef2f2; border-left-color: #ef4444; }
+        .stat span { font-size: 0.85rem; color: #64748b; }
+        .stat strong { display: block; font-size: 1.35rem; margin-top: 4px; color: #0f172a; }
+        .warning-banner { margin-top: 14px; background: #fee2e2; color: #991b1b; padding: 10px 14px; border-radius: 6px; font-size: 0.92rem; font-weight: 600; }
+
+        .login-box { max-width: 420px; margin: 0 auto 30px; background: #fff; padding: 28px; border-radius: 10px; box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+        .login-box h3 { text-align: center; color: #1e3a8a; margin-bottom: 18px; font-size: 1.3rem; }
+        .form-group { margin-bottom: 14px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.92rem; }
+        .form-group input { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 0.95rem; }
+        .btn-login { width: 100%; background: #1e3a8a; color: #fff; border: none; padding: 11px; border-radius: 5px; font-size: 1rem; font-weight: bold; cursor: pointer; }
+        .btn-login:hover { background: #1d4ed8; }
+        .note { text-align: center; margin-top: 14px; font-size: 0.9rem; color: #475569; }
+        .note a { color: #1e3a8a; font-weight: 600; text-decoration: none; }
+
+        footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 18px; font-size: 0.9rem; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">EduBudget Tracker</div>
+    <nav>
+        <a href="#info">System Info</a>
+        <a href="#categories">Categories</a>
+        <a href="#sample">Sample Dashboard</a>
+        <a href="#login">Login</a>
+        <a href="register.html" class="btn-reg">Register</a>
+    </nav>
+</header>
+
+<section class="hero" id="info">
+    <h1>Student Expense Tracking & Budget Management System</h1>
+    <p>Plan monthly budgets, record daily student expenses, receive automatic overspending alerts, and export category expense reports easily.</p>
+    <a href="register.html" class="cta">Register as Student</a>
+</section>
+
+<div class="container">
+    <h2 class="sec-title" id="categories">Supported Expense Categories</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Food & Dining</h3>
+            <p>Canteen meals, groceries, snacks, and beverages.</p>
+        </div>
+        <div class="card">
+            <h3>Transport</h3>
+            <p>Bus fares, train passes, fuel, and daily travel.</p>
+        </div>
+        <div class="card">
+            <h3>Study Materials</h3>
+            <p>Textbooks, photocopying, notebooks, and stationery.</p>
+        </div>
+        <div class="card">
+            <h3>Accommodation</h3>
+            <p>Hostel charges, room rent, electricity, and water.</p>
+        </div>
+        <div class="card">
+            <h3>Entertainment</h3>
+            <p>Movies, outings, sports, and leisure activities.</p>
+        </div>
+    </div>
+
+    <h2 class="sec-title" id="sample">Sample Student Dashboard Preview</h2>
+    <div class="sample-card">
+        <p style="margin-bottom:14px; color:#475569;"><strong>Guest Preview:</strong> Sample monthly budget tracking view.</p>
+        <div class="grid" style="margin-bottom:0;">
+            <div class="stat">
+                <span>Monthly Budget</span>
+                <strong>Rs. 20,000.00</strong>
+            </div>
+            <div class="stat">
+                <span>Total Spent</span>
+                <strong>Rs. 16,500.00</strong>
+            </div>
+            <div class="stat alert-stat">
+                <span>Remaining Balance</span>
+                <strong>Rs. 3,500.00</strong>
+            </div>
+        </div>
+        <div class="warning-banner">
+            Sample Alert: 82.5% of monthly budget used. Monitor upcoming expenses closely.
+        </div>
+    </div>
+
+    <div class="login-box" id="login">
+        <h3>Account Login</h3>
+        <form action="login.php" method="POST">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="student@university.edu" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn-login">Login</button>
+        </form>
+        <div class="note">
+            New student? <a href="register.html">Create an account</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    Student Expense Tracking and Budget Management System &copy; 2026
+</footer>
+
+</body>
+</html>
